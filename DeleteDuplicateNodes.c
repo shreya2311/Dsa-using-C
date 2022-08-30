@@ -1,0 +1,14 @@
+ptr=start;
+if(start==NULL)
+    return;
+while(ptr->next!=NULL)
+{
+    if(ptr->data==ptr->next->data)
+    {
+        ptr1=ptr->next->next;
+        free(ptr->next);
+        ptr->next=ptr1;
+    }
+    else
+        ptr=ptr->next;
+}

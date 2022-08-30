@@ -1,0 +1,18 @@
+if(start==NULL||start->next=NULL)
+    return;
+ptr=start->next;
+prev=start;
+start=start->next;
+while(1)
+{
+    ptr1=ptr->next;
+    ptr->next=prev;
+    if(ptr1==NULL||ptr1->next==NULL)
+    {
+        prev->next=ptr1;
+        break;
+    }
+    prev->next=ptr1->next;
+    prev=ptr1;
+    ptr=ptr1->next;
+}
