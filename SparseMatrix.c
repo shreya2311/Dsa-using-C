@@ -11,11 +11,11 @@ struct sparse *create()
     int num,i;
     struct sparse* arr;
     printf("\nenter no of non-zero elements:");
-    scanf("%d",&num);
+    scanf("%d",&num);  
     arr=(struct sparse*)malloc((num+1)*sizeof(struct sparse));
     printf("\nenter dimension of matrix:");
     scanf("%d %d",&arr[0].x,&arr[0].y);
-    arr[0].z=num;
+    arr[0].z=num;                                              //Add no. of non-zero elements to (Z,0) location
     printf("\nenter elements:");
     for(i=1;i<=num;i++)
     {
