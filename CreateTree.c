@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
-
-struct tree
-{
-    int data;
+                                     #we'll solve this by making a queue 
+struct tree                          #we'll make a tree node and save its address to the queue
+{                                    #as queue is Fifo it will help us to make a tree
+    int data;                #when we search for left child we will push address into queue and while searching for right child we will pop that data address from queue
     struct tree* lchild;
     struct tree* rchild;
 };
